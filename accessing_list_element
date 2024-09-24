@@ -1,0 +1,90 @@
+# question 2 : access the element at index 2 in a list.
+
+# access the element at particular index
+def access_element_at_particular_index(list):
+    # taking index number
+    print();
+    print("the length of list is : '",len(list),"'");
+    print();
+    index = int(input("enter the index number (should not out of index range): "));
+    print();
+    print("value at index '",index,"' is : '",list[index],"'");
+    print();
+
+# input integer list;
+def inputListInteger(list):
+    print();
+    i = 0;
+    print("(Remember) for stoping type '-9999' : ~ ");
+    print();
+    while(True):
+        x = int(input("enter the element of the list : "));
+        if(x == -9999):
+            break;
+        list.insert(i,x);
+        i=i+1;
+
+# input decimal list;
+def inputListFloat(list):
+    print();
+    i = 0;
+    print("(Remember) for stoping type '-9999' : ~ ");
+    print();
+    while(True):
+        x = float(input("enter the element of the list : "));
+        if(x == -9999.0):
+            break;
+        list.insert(i,x);
+        i=i+1;
+
+# input string list;
+def inputListString(list):
+    print();
+    i = 0;
+    print("(Remember) for stoping type '-9999' : ~ ");
+    print();
+    while(True):
+        x = input("enter the element of the list : ");
+        if(x == '-9999'):
+            break;
+        list.insert(i,x);
+        i=i+1;
+
+
+# calling which type of list do you want to input
+def calling(list):
+    # asking user to select type of list
+    print();
+    print("welcome : ~ ");
+    print();
+    print("1 : for input integer list");
+    print("2 : for input decimal list");
+    print("3 : for input string list");
+    print();
+    type = int(input("enter the option : "));
+
+    # calling selected type of method of list 
+    if(type == 1):
+        inputListInteger(list);
+    elif(type == 2):
+        inputListFloat(list);
+    elif(type == 3):
+        inputListString(list);
+
+# creating main method
+def main():
+    print();
+    print("question 2 : access the element at index 2 in a list.");
+    print();
+    print("answer : ~ ");
+
+    # creating empty list
+    list = [];
+
+    #calling calling methods to input list
+    calling(list);
+
+    #calling method to access an element at particular index
+    access_element_at_particular_index(list);    
+
+main();
